@@ -19,6 +19,8 @@ def main():
 
     dispatcher = updater.dispatcher
     dispatcher.add_handler(start_handler)
+    dispatcher.add_handler(help_handler)
+    dispatcher.add_handler(about_handler)
     dispatcher.add_handler(search_handler)
     dispatcher.add_handler(CallbackQueryHandler(button))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
