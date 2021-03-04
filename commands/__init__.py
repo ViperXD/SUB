@@ -18,7 +18,7 @@ def help(update: Update, context: CallbackContext):
         parse_mode="html",
         disable_web_page_preview=True,
         text=Messages.HELP,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
     )
 
 def about(update: Update, context: CallbackContext):
@@ -27,7 +27,7 @@ def about(update: Update, context: CallbackContext):
         parse_mode="html",
         disable_web_page_preview=True,
         text=Messages.ABOUT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
     )
 
 def searching(update: Update, context: CallbackContext):
