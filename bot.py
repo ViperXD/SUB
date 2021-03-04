@@ -5,31 +5,16 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 from config import BOT_TOKEN
-
-from telegram.ext import (
-    Updater,
-    CommandHandler,
-    CallbackQueryHandler,
-    MessageHandler,
-    Filters,
-    InlineQueryHandler
-)
-
-from commands import (
-    start,
-    searching
-)
-
-from inline import(
-    button,
-    inlinequery
-)
-
+from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters, InlineQueryHandler
+from commands import start, help, about, searching
+from inline import button, inlinequery
 
 def main():
     updater = Updater(token=BOT_TOKEN, use_context=True, workers=8)
     logger.info(f"SUCESSFULLY STARTED THE BOT IN {updater.bot.username}")
     start_handler = CommandHandler('start', start)
+    help_handler = CommandHandler('help', help)
+    about_handler = CommandHandler('about', about)
     search_handler = MessageHandler(Filters.text, searching)
 
     dispatcher = updater.dispatcher
@@ -40,7 +25,6 @@ def main():
     updater.start_polling()
     updater.idle()
     updater.stop()
-
 
 if __name__ == "__main__":
     main()
