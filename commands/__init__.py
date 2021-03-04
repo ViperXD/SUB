@@ -6,7 +6,7 @@ from telegram.ext import CallbackContext
 def start(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=Messages.START.format(update.effective_user.mention),
+        text=Messages.START.format(update.effective_user.id, update.effective_user.first_name),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
     )
 
