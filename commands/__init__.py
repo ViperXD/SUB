@@ -6,6 +6,8 @@ from telegram.ext import CallbackContext
 def start(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
+        parse_mode="html",
+        disable_web_page_preview=True,
         text=Messages.START.format(update.effective_user.id, update.effective_user.first_name),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
     )
@@ -13,6 +15,8 @@ def start(update: Update, context: CallbackContext):
 def help(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
+        parse_mode="html",
+        disable_web_page_preview=True,
         text=Messages.HELP,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
     )
@@ -20,6 +24,8 @@ def help(update: Update, context: CallbackContext):
 def about(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
+        parse_mode="html",
+        disable_web_page_preview=True,
         text=Messages.ABOUT,
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
     )
