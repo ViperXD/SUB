@@ -5,7 +5,7 @@ class Messages(object):
 /help for more...
 """
   HELP = """
-- Just send me Movie name. Use @imdb or @imdbot inline to get currect movie name.
+- Just send me Movie name. Use @imdb or @imdbot inline to get correct movie name.
 - I will search that subtitle
 - Then select the language
 - Then I will send that subtitle file to you
