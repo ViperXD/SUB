@@ -1,23 +1,13 @@
-from subtitle import (
-    BASE_URL,
-    get_lang,
-    search_sub
-)
-
-from telegram import (
-    Update,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup
-)
-
+from subtitle import BASE_URL, get_lang, search_sub
+from messages import Messages
+from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import CallbackContext
 
 def start(update: Update, context: CallbackContext):
     context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=f"Hi *{update.effective_user.mention}*!\n\nI am subtitle downloader bot. I can provide movie subtitles.\n\n==> Just send me Movie name. Use @imdb or @imdbot inline to get currect movie name.\n\nSubscribe ℹ️ @FayasNoushad if you ❤️ using this bot!",
+        text=Messages.START_TEXT.format(update.effective_user.mention),
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
-        parse_mode="Markdown"
     )
 
 def searching(update: Update, context: CallbackContext):
