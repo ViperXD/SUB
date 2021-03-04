@@ -1,6 +1,8 @@
 class Messages(object):
   START = """
 <b>Hello <a href='tg://user?id={}'>{}</a>, I' am subtitle downloader bot. I can provide movie subtitles.</b>
+
+/help for more...
 """
   HELP = """
 - Just send me Movie name. Use @imdb or @imdbot inline to get currect movie name.
