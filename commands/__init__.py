@@ -12,15 +12,6 @@ def start(update: Update, context: CallbackContext):
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
     )
 
-def help(update: Update, context: CallbackContext):
-    context.bot.send_message(
-        chat_id=update.effective_chat.id,
-        parse_mode="html",
-        disable_web_page_preview=True,
-        text=Messages.HELP,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
-    )
-
 def searching(update: Update, context: CallbackContext):
     if update.message.via_bot != None:
         return
