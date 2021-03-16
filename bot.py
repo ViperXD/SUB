@@ -14,13 +14,11 @@ def main():
     logger.info(f"SUCESSFULLY STARTED THE BOT IN {updater.bot.username}")
     start_handler = CommandHandler('start', start)
     help_handler = CommandHandler('help', help)
-    about_handler = CommandHandler('about', about)
     search_handler = MessageHandler(Filters.text, searching)
 
     dispatcher = updater.dispatcher
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
-    dispatcher.add_handler(about_handler)
     dispatcher.add_handler(search_handler)
     dispatcher.add_handler(CallbackQueryHandler(button))
     dispatcher.add_handler(InlineQueryHandler(inlinequery))
