@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 
 from config import BOT_TOKEN
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageHandler, Filters, InlineQueryHandler
-from commands import start, help, searching
+from commands import start, searching
 from inline import button, inlinequery
 
 def main():
