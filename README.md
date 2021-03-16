@@ -16,3 +16,9 @@
     <img height="25px" src="https://img.shields.io/badge/Projects_Channel-30302f?style=flat&logo=telegram">
   </a>
 </p>
+
+### Credits 
+
+* [Python Telegram Bot](https://github.com/python-telegram-bot/python-telegram-bot)
+* [Anand PS](https://github.com/Anandpskerala)
+* [Contributors](https://github.com/FayasNoushad/Telegraph-Uploader-Bot/graphs/contributors)
