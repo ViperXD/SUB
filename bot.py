@@ -13,7 +13,6 @@ def main():
     updater = Updater(token=BOT_TOKEN, use_context=True, workers=8)
     logger.info(f"SUCESSFULLY STARTED THE BOT IN {updater.bot.username}")
     start_handler = CommandHandler('start', start)
-    help_handler = CommandHandler('help', help)
     search_handler = MessageHandler(Filters.text, searching)
 
     dispatcher = updater.dispatcher
