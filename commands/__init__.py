@@ -9,7 +9,7 @@ def start(update: Update, context: CallbackContext):
         parse_mode="html",
         disable_web_page_preview=True,
         text=Messages.START.format(update.effective_user.id, update.effective_user.first_name),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/FayasNoushad'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/FayasChat')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Channel ⚙', url='https://telegram.me/VKPROJECTS'), InlineKeyboardButton('⚙ Group ⚙', url='https://telegram.me/VKP_BOTS')]]),
     )
 
 def searching(update: Update, context: CallbackContext):
