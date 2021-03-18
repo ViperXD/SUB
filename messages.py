@@ -6,6 +6,5 @@ Hello <a href='tg://user?id={}'>{}</a>, I' am subtitle downloader bot. I can pro
 - I will search that subtitle
 - Then select the language
 - Then I will send that subtitle file to you 
-
-Made by @FayasNoushad
+❤ Made by @VkProjects
 """
